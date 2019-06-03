@@ -1,0 +1,105 @@
+<!--Ben Podrazhansky -->
+<DOCTYPE html>
+    <html lang="en-US">
+    <head>
+        <!-- Internal CSS Here: Pre-Defines element types for all occurences of that type in the page. -->
+        <style>
+            h3	{background-color:yellow; font-family:monospace}
+            h2	{font-family:monospace}
+            li	{ padding: 10px;}
+          <!-- id example --> 
+           #p1 {
+                    background-color:blue;
+                    border: 3px solid red;
+                    color:white;
+                }
+          <!-- class example -->
+          h4.log 	{color:red;}
+          p.log		{color:blue;}
+        </style>
+        
+    </head>
+    <body>
+        <!-- Inline CSS Here: Defines style for element--><h1 style="text-align:center; font-family:monospace"><abbr title="Cascading Style Sheets">CSS</abbr></h1>
+        <hr>
+        <ul>
+            <h2> Types of CSS</h2>
+            <li> Inline </li>
+            <li> Internal </li>
+            <li> External </li>
+        </ul>
+        <hr>
+        
+        <h3> Inline CSS</h3> 
+        <p style="text-align:center"> Inline CSS is just using the syle attribute as an attribute of an element.<br>
+        <'p style="text-align:center"'><'/p'></p>
+        <hr>
+    
+        <h3> Internal CSS</h3><!-- Style of this element type was set internally in the head -->
+        <p> Internal CSS uses a style tag in the head and defines style for element types as oppose to individual 		instances of an element with inline CSS.<br>
+        <pre>
+        To set all h3 sized heading to have a yellow background, have the following in your head:
+        &lt;head&gt;
+            &lt;style&gt;
+                h3	{background-color:yellow;}
+            &lt;/style&gt;
+        &lt;/head&gt;
+        </pre>
+        </p>
+        <hr>
+        
+        <h3> External CSS</h3>
+        <p> External css is where in the &lt;head&gt;, you link to a .css file with all of the stylings. It is like Internal CSS, where it defines styles for element types, but the difference is that it is retrieved from a .css file. An advantage to this can be if you like a particular format for all of your pages and you don't want to have to define the format in the &lt;head&gt; of every page.
+        <pre>
+        Use it like this:
+        
+        &lt;head&gt;
+            &lt;link rel="stylesheets" href="path/to/styles.css"&gt;
+        &lt;/head&gt;
+        </pre></p>
+        
+        <hr>
+        <h2>CSS Fonts</h2>
+        <ul>
+        <h3> There are multiple ways to manipulate text fonts with CSS </h3>
+        <li style=color:blue> Color: color:blue </li>
+        <li style=font-family:cursive> Font: font:family:cursive</li>
+        <li style=font-size:30px> Font size in pixel height: font-size:30px</li>
+        <li style=font-size:150%> Font size in percentage: font-size:150%</li>
+        <li style="border: 5px solid yellow"> Border of element: "border: 5px solid yellow"</li>
+        <li> Padding with percentage or pixels: padding:1px or padding:20%</li>
+        <li style="margin:10px"> margin with percentage or pixels: margin:10px or margin:10%</li>
+        </ul>
+        <hr>
+        
+        <h2> id Attribute </h2>
+        <p> You can give elements there own id in the tag. This can be usefull if you want to
+        define its stile using internal CSS by defining it in the &lt;head&gt;.<pre>
+        &lt;head&gt;
+            &lt;style&gt;
+                #p1	{
+                                background-color:blue;
+                            border: 3px solid red;
+                                    color:white;
+                    }
+            &lt;/style&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;p&gt; This is a normal paragraph &lt;/p&gt;</pre>
+            <pre id="p1">	&lt;p id=<q>p1</q>&gt; This paragraph has the style set in the head.&lt;/p&gt;</pre></p>
+            <hr>
+            
+            <h2> class Attribute </h2>
+            <p class=classExplanation> The class attribute is similar to an id, but an id should be unique, and a
+            class should be used multiple times. Lets have the class "log" and I want any paragraph that is a log to be in blue text.<pre>
+         &lt;head&gt;
+            &lt;style&gt;
+                p.log	{color:blue;}
+            &lt;/style&gt;
+        &lt;/head&gt;
+        &lt;body&gt;</pre></p> 
+           <p> This is a normal paragraph </p>
+        <p class = log> &lt;p class = log &gt; This paragraph is a log &lt;/p&gt;</p>
+        
+        
+        

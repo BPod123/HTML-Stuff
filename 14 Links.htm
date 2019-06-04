@@ -1,0 +1,72 @@
+<!-- Ben Podrazhansky -->
+<!DOCTYPE html>
+<head>
+	<style>
+    	h2	{font-family:fantacy;}
+        a:link	{color:red}
+        a:hover	{color:yellow;
+        		background-color:black;}
+       	a:active {color:orange;
+        		  background-color:purple;}
+        a:visited	{font-family:cursive;}
+    </style>
+</head>
+<body>
+	<h1 style="font-family:fantacy;">HTML Links</h1>
+    <hr>
+    <h2> The &lt;a&gt; tag defines links</h2>
+    <p> &lt;a href = "Url or file path" &gt; Text here &lt;/a&gt;<br>
+    <a href="https://github.com/BPod123">My GitHub </a></p>
+    <hr>
+    
+    <h2 id="linkStyle"> Can set the style of links when that are active, visited, hovered over or untouched in the &lt;head&gt;</h2>
+    <p><pre>
+    &lt;head&gt;
+    &lt;style&gt;
+    a:link {
+      color: green;
+      background-color: transparent;
+      text-decoration: none;
+    }
+    a:visited {
+      color: pink;
+      background-color: transparent;
+      text-decoration: none;
+    }
+    a:hover {
+      color: red;
+      background-color: transparent;
+      text-decoration: underline;
+    }
+    a:active {
+      color: yellow;
+      background-color: transparent;
+      text-decoration: underline;
+    }
+    &lt;/style&gt;
+    &lt;/head&gt;
+    </pre></p>
+    <hr>
+    
+    <h2> The target Attribute </h2>
+    <h3> Set where links are opened </h3>
+    <p> The target attribute determines whether a link is opened in the same tab,
+    	a new tab, or even a new window. </p>
+        <ul><h4> target = 
+        <li>_blank	=> Opens link in a new window or tab</li>
+        <li>_self	=> Opens link in the same tab as the link (default target)</li>
+        <li>_parent	=> Opens link in the parent frame</li>
+        <li>_top	=> Opens link in the full body of the window</li>
+        </ul>
+        </p>
+        <hr>
+        
+        <h2> Imbedding links within images </h2>
+        <p> You can imbed links within images easily. All you have to do is put an image where you would normally put the text for a link. Bing Bang Boom and you have a picture link. <br>
+        <a href=https://github.com/BPod123> <img src="images/WashingtonZombieSlayer.jpg" cite ="https://imgur.com/gallery/YG0Nt" alt="George Washington wielding two handguns fighting off a horde of zombies."></a>
+        &lt;a href=https://github.com/BPod123&gt; &lt;img src="images/WashingtonZombieSlayer.jpg" cite = "https://imgur.com/gallery/YG0Nt" alt="George Washington wielding two handguns fighting off a horde of zombies."&gt; &lt;/a&gt;</p>
+        <hr>
+        
+        <h2> Create a bookmark on the page </h2>
+        <p> This links to the part of the page on link style because the header there has id="linkStyle".<br>
+         &lt;a href=#linkStyle&gt; <a href=#linkStyle> Link Styles </a>&lt;/a&gt;

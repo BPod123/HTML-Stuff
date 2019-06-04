@@ -7,6 +7,41 @@
         h2	{font-family:fantacy;}
     </style>
 </head>
-<body>
+<body style="background-color:lightgreen">
 <h1> Images </h1>
 <hr>
+<h2> Minimum requirements for an image: The src Attribute </h2>
+<p> An image tag must have the keyword img and the image file or url to image<br>
+&lt;img src="filename.jpg"&gt;<br>
+Or:<br>
+&lt;img src="https:urlOfImage.com"&gt;</p>
+<hr>
+
+<h2> The alt Atribute </h2>
+<p> The alt attribute lets you set text to be displayed when the image cannot be found.<br><br>
+Image tag: &lt;img src="path/to/nonexistant/file.jpg" alt = "Picture of the most awesome thing ever."&lt;
+<br><br>
+What is seen by the user:<br><br>
+<img alt="Picture of the most awesome thing ever.">
+</p>
+<hr>
+
+<h2> You can use the width and height attributes to set the size of the image </h2>
+<p> &lt;img src="url or file" width = "(int)width in pixels" height = "(int) height in pixels" &gt;<br><br>
+Be mindful that images have a certain aspect ratio and messing with the width and height, if not done properly, can distort the image. </p>
+<hr>
+<h2> Set Attributes with style in head </h2>
+<p><pre>
+&lt;head&gt;
+	&lt;style&gt;
+    	img {	width:100%;
+        		height:50;
+			}
+    &lt;/style&gt;
+&lt;/head&gt;
+<hr>
+<h2> Images as link </h2>
+<p> You can make an image act as a link by putting the image where the text would normally go in the link.<br><pre>
+&lt;a href="https://github.com/BPod123"&gt; &lt;img src="https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwicjZeHk9DiAhUosVQKHSD6CQ8QjRx6BAgBEAU&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FJupiter&psig=AOvVaw2Jjsw6Vk0ahrUZa-8imIVp&ust=1559748757546852" alt="Jupiter"&gt;&lt;/a&gt;
+
+<a href = "https://github.com/BPod123"> <img src="https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwicjZeHk9DiAhUosVQKHSD6CQ8QjRx6BAgBEAU&url=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FJupiter&psig=AOvVaw2Jjsw6Vk0ahrUZa-8imIVp&ust=1559748757546852" alt="Jupiter"> </a></pre></p>

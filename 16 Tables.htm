@@ -1,0 +1,213 @@
+<!-- Ben Podrazhansky -->
+<DOCTYPE html>
+    <html lang="en-US">
+    <head>
+        <style>
+        body {background-color:black;
+            color:white;
+    
+            font-family:fantacy;
+            }
+        h1	{text-align:center;}
+        h2	{color:yellow;}
+        p	{font-family:times;}
+        pre	{font-family:times;}
+        #default	{border:0px solid white;}
+        table, th, td	{border:1px solid white;}
+        #singleBorder	{border:1px solid white;
+                        border-collapse:collapse;}
+        #padding	{padding:15px}
+        </style>
+    </head>
+    <body>
+    
+    <h1> Tables</h1>
+    <hr>
+    
+    <h2> Defining Tables </h2>
+    <p>
+    Define a table with the &lt;table&gt;<table>.
+    Table rows are defined with &lt;tr&gt;
+    Within a row are table headers &lt;th&gt; and table data cells &lt;td&gt;.
+    Table headers &lt;th&gt; are bolded and centered while table data cells are normal.
+    </p>
+    <h3>Code for Table 1:</h3>
+    <p> <pre>
+    &lt;table&gt;
+        &lt;tr&gt;
+        &lt;th&gt; Table header 1 &lt;/th&gt;
+        &lt;th&gt; Table header 2 &lt;/th&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+        &lt;td&gt; Row 2 data 1 &lt;/td&gt;
+        &lt;td&gt; Row 2 data 2 &lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/table&gt;
+        </pre></p>
+    <table id=default>
+    <tr id= default>
+    <th id = default> Table header 1 </th>
+    <th id = default> Table header 2 </th>
+    </tr>
+    <tr id = default>
+    <td id = default> Row 2 data 1 </td>
+    <td id = default> Row 2 data 2 </td>
+    </tr>
+    </table>
+    <hr>
+    
+    <h2> Adding borders </h2>
+    </p> You can add borders to your tables by using CSS.<br>
+    style="border:1px solid white", or by setting the style for tables, rows, headers, and data cells in the head. You can also set the table width to 100% to fill out the page as follows:<pre>
+    &lt;head&gt;
+        &lt;style&gt;
+            table, th, td	{border:1px solid white;}
+        &lt;/style&gt;
+    &lt;/head&gt;
+    
+    Then add a table normally:
+    
+    &lt;table style="width:100%;"&gt;
+        &lt;tr&gt;
+        &lt;th&gt; Table header 1 &lt;/th&gt;
+        &lt;th&gt; Table header 2 &lt;/th&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+        &lt;td&gt; Row 2 data 1 &lt;/td&gt;
+        &lt;td&gt; Row 2 data 2 &lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/table&gt;
+    
+    <table style="width:100%">
+    <tr>
+    <th> Table header 1 </th>
+    <th> Table header 2 </th>
+    </tr>
+    <tr>
+    <td> Row 2 data 1 </td>
+    <td> Row 2 data 2 </td>
+    </tr>
+    </table>
+    <hr>
+    
+    <h2> Making a single border</h2>
+    <p> Have the border be a single border; one shared between table, rows, headers, and data cells; with style="border-collapse:collapse"</p>
+    &lt;head&gt;
+        &lt;style&gt;
+            table, th, td	{border:1px solid white;
+                            border-collapse:collapse;}
+        &lt;/style&gt;
+    &lt;/head&gt;
+    
+    <table id=singleBorder style="width:100%">
+    <tr id= singleBorder>
+    <th id = singleBorder> Table header 1 </th>
+    <th id = singleBorder> Table header 2 </th>
+    </tr>
+    <tr id = singleBorder>
+    <td id = singleBorder> Row 2 data 1 </td>
+    <td id = singleBorder> Row 2 data 2 </td>
+    </tr>
+    </table>
+    <hr>
+    
+    <h2> Cell Padding </h2>
+    <p> Add cell padding to table headers &lt;th&gt; and table data cells &lt;td&gt; with CSS padding:<pre>
+    &lt;th style="padding:15px"&gt; or &lt;td style="padding:15px"&gt;
+    
+    <table style="width:100%">
+    <tr>
+    <th style="padding:15px"> Table header 1 </th>
+    <th style="padding:15px"> Table header 2 </th>
+    </tr>
+    <tr>
+    <td style="padding:15px"> Row 2 data 1 </td>
+    <td style="padding:15px"> Row 2 data 2 </td>
+    </tr>
+    </table>
+    <hr>
+    
+    <h2> Add border spacing</h2>
+    <p> Give tables &lt;table&gt; the border spcaing with CSS: style="border-spacing:5px"<pre>
+    &lt;table style="width:100%; border-spacing:5px"&gt;
+        &lt;tr&gt;
+        &lt;th style=&gt; Table header 1 &lt;/th&gt;
+        &lt;th&gt; Table header 2 &lt;/th&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+        &lt;td&gt; Row 2 data 1 &lt;/td&gt;
+        &lt;td&gt; Row 2 data 2 &lt;/td&gt;
+        &lt;/tr&gt;
+        &lt;/table&gt;
+        </pre>
+    </p>
+    <table style="width:100%; border-spacing:5px">
+    <tr>
+    <th style=> Table header 1 </th>
+    <th> Table header 2 </th>
+    </tr>
+    <tr>
+    <td> Row 2 data 1 </td>
+    <td> Row 2 data 2 </td>
+    </tr>
+    </table> </p>
+    <hr>
+    
+    <h2> Make cells span multiple collumns and rows with rowspan and colspan</h2>
+    <p> Make a cell span 2 rows and 3 collumns with &lt;td rospan="2" colspan="3"&gt;<pre>
+    &lt;table&gt;
+        &lt;tr&gt;
+        &lt;th&gt; Table header 1 &lt;/th&gt;
+        &lt;th rowspan="2" colspan="3"&gt; Table header 2 &lt;/th&gt;
+        &lt;th&gt; Table header 3 &lt;/th&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+        &lt;td&gt; Row 2 data 1 &lt;/td&gt;
+        &lt;td&gt; Row 2 data 2 &lt;/td&gt;
+        &lt;td&gt; Row 2 data 3 &lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/table&gt;
+    <table>
+        <tr>
+        <th > Table header 1 </th>
+        <th rowspan="2" colspan="3"> Table header 2 </th>
+        <th> Table header 3 </th>
+        </tr>
+        <tr>
+        <td> Row 2 data 1 </td>
+        <td> Row 2 data 2 </td>
+        <td> Row 2 data 3 </td>
+        </tr>
+    </table>
+    </pre> </p>
+    <hr>
+    
+    <h2> Adding a caption with the &lt;caption&gt; tag </h2>
+    <p> <pre>
+    &lt;table style="width:100%;"&gt;
+        &lt;caption&gt; This is a caption. It can be used as a title. &lt;/caption&gt;
+        &lt;tr&gt;
+        &lt;th&gt; Table header 1 &lt;/th&gt;
+        &lt;th&gt; Table header 2 &lt;/th&gt;
+        &lt;/tr&gt;
+        &lt;tr&gt;
+        &lt;caption&gt; This caption was placed in a row. &lt;/caption&gt;
+        &lt;td&gt; Row 2 data 1 &lt;/td&gt;
+        &lt;td&gt; Row 2 data 2 &lt;/td&gt;
+        &lt;/tr&gt;
+    &lt;/table&gt;
+    </pre> </p>
+    
+    <table style="width:100%">
+    <caption> This is a caption. It can be used as a title. </caption>
+    <tr>
+    <th> Table header 1 </th>
+    <th> Table header 2 </th>
+    </tr>
+    <tr>
+    <caption> This caption was placed in a row. </caption>
+    <td> Row 2 data 1 </td>
+    <td> Row 2 data 2 </td>
+    </tr>
+    </table>
+    

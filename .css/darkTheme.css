@@ -5,6 +5,8 @@ body {background-color:black;
     }
 h1	{text-align:center;}
 h2	{color:yellow;}
-p, pre   {font-family:monospace;}
+p, pre  {font-family:monospace;}
 table   {border: 1px solid white; width: 100%;}
 th, tr, td  {border: 1px solid white;}
+a:visited   {color:rgb(250, 10, 210)}
+a:hover     {color:yellow;}

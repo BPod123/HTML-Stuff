@@ -1,18 +1,57 @@
 <!-- Ben Podrazhansky -->
 <!DOCTYPE html>
 <html lang="en-US">
-    <head>
-        <link rel="stylesheet" href=".css/darkTheme.css">
-    </head>
-    <body>
-        <h1> Lists </h1>
-        <hr>
 
-        <h2> Ordered and Unordered Lists </h2>
-        <p> There are two types of lists. Ordered lists &lt;ol&gt; have numbered list items &lt;li&gt;, 
-            while unordered lists &lt;ul&gt; have list items &lt;li&gt; shown in bullet points.<pre>
-                
-                <h3> <ins>Ordered List:</ins></h3>
+<head>
+    <link rel="stylesheet" href=".css/darkTheme.css">
+    <style>
+        ul.horizontalList {
+            list-style-type: none;
+            margin: 0;
+            padding: 10;
+            overflow: hidden;
+            background-color: #777777;
+        }
+        li.horizontalList {float:left}
+        li.horizontalList a{
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 16px;
+            text-decoration: none;
+        }
+        li.horizontalList a:hover {
+            background-color: #111111;
+        }
+    </style>
+</head>
+
+<body>
+    <h1> Lists </h1>
+    <h4 style="font-family:monospace; text-align:center;">
+        <pre><ins>Previous:</ins> <a href="16 Tables.htm"><ins>16 Tables</ins></a>      <ins>Next:</ins> <a href = "18 Blocks.htm"><ins>18 Blocks</ins></a></pre>
+        </pre>
+    </h4>
+
+    <hr>
+
+    <h2> <ins>Types of Lists</ins> </h2>
+    <p>
+        <pre>
+            <ul>
+                <li><a href="#orderedLists">Ordered Lists</a></li>
+                <li><a href="#unorderedLists">Unordered Lists</a></li>
+                <li><a href="#descriptionLists">Description Lists</a></li>
+                <li><a href ="#nestedLists">Nested Lists</a></li>
+                <li><a href="#horizontalLists">Horizontal Lists</a></li>
+            </ul></pre>
+    </p>
+    <hr>
+
+
+    <h2 id="orderedLists"><ins> Ordered Lists </ins></h2>
+    <p>
+        <pre>
     &lt;ol&gt;
         &lt;li&gt; Item 1 &lt;/li&gt;
         &lt;li&gt; Item 2 &lt;/li&gt;
@@ -23,51 +62,288 @@
                     <li> Item 2 </li>
                     <li> Item 3 </li>
                 </ol>
-                
-                <h3> <ins>Unordered List:</ins></h3>
+        </pre>
+    </p>
+    <table>
+        <caption>
+            <h2><ins>Ordered List Customization</ins></h2>
+        </caption>
+        <tr>
+            <td>
+                <h3>Default ordered list</h3>
+                <pre>
+    &lt;ol&gt;
+        &lt;li&gt; Item 1 &lt;/li&gt;
+    &lt;/ol&gt;</pre>
+                <ol>
+                    <li> Item 1 </li>
+                    <li> Item 2 </li>
+                </ol>
+            </td>
+            <td>
+                <h3>type="1" -- Same as default</h3>
+                <pre>
+    &lt;ol type="1"&gt;
+    &lt;li&gt; Item 1 &lt;/li&gt;
+    &lt;/ol&gt;</pre>
+                <ol>
+                    <li> Item 1 </li>
+                    <li> Item 2 </li>
+                </ol>
+            </td>
+            <td>
+                <h3>Define the starting number:</h3>
+                <pre>
+    &lt;ol start="50"&gt;
+    &lt;li&gt; Item 1 &lt;/li&gt;
+    &lt;/ol&gt;</pre>
+                <ol start="50">
+                    <li> Item 1 </li>
+                    <li> Item 2 </li>
+                </ol>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h3>Upper Case Letters: type="A"</h3>
+                <pre>
+    &lt;ol type="A"&gt;
+        &lt;li&gt; Item 1 &lt;/li&gt;
+    &lt;/ol&gt;</pre>
+                <ol type="A">
+                    <li> Item 1 </li>
+                </ol>
+            </td>
+            <td>
+                <h3>Lower Case Letters: type="a"</h3>
+                <pre>
+    &lt;ol type="a"&gt;
+        &lt;li&gt; Item 1 &lt;/li&gt;
+    &lt;/ol&gt;</pre>
+                <ol type="a">
+                    <li> Item 1 </li>
+                </ol>
+            </td>
+            <td>
+                <h3>Define starting letter</h3>
+                <pre>
+    &lt;ol type="a" start = "7"&gt;
+        &lt;li&gt; Item 1 &lt;/li&gt;
+        &lt;li&gt; Item 2 &lt;/li&gt;
+    &lt;/ol&gt;</pre>
+                <ol type="a" start="7">
+                    <li> Item 1 </li>
+                    <li> Item 2</li>
+                </ol>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h3> Upper Case Roman Numerals: type="I" </h3>
+                <pre>
+    &lt;ol type="I"&gt;
+        &lt;li&gt; Item 1 &lt;/li&gt;
+        &lt;li&gt; Item 1 &lt;/li&gt;
+    &lt;/ol&gt;</pre>
+                <ol type="I">
+                    <li> Item 1 </li>
+                    <li> Item 2</li>
+                </ol>
+            </td>
+            <td>
+                <h3> Lower Case Roman Numerals: type = "i"</h3>
+                <pre>
+    &lt;ol type="i"&gt;
+        &lt;li&gt; Item 1 &lt;/li&gt;
+        &lt;li&gt; Item 2 &lt;/li&gt;
+    &lt;/ol&gt;</pre>
+                <ol type="i">
+                    <li> Item 1 </li>
+                    <li> Item 2 </li>
+                </ol>
+            </td>
+            <td>
+                <h3> Define Starting Number:</h3>
+                <pre>
+        &lt;ol type="i" start ="20"&gt;
+            &lt;li&gt; Item 1 &lt;/li&gt;
+            &lt;li&gt; Item 2 &lt;/li&gt;
+        &lt;/ol&gt;</pre>
+                <ol type="i" start="20">
+                    <li> Item 1 </li>
+                    <li> Item 2 </li>
+                </ol>
+            </td>
+        </tr>
+    </table>
+    <hr>
+
+    <h2 id="unorderedLists"><ins>Unordered Lists</ins></a></h2>
+    <pre>
     &lt;ul&gt;
         &lt;li&gt; Item 1 &lt;/li&gt;
         &lt;li&gt; Item 2 &lt;/li&gt;
         &lt;li&gt; Item 3 &lt;/li&gt;
-    &lt;/ul&gt;
-                <ul>
-                    <li> Item 1 </li> 
-                    <li> Item 2 </li>
-                    <li> Item 3 </li>
-                </ul>
-
-            </pre>
-        </p>
-        <hr>
-
-        <h2><ins> Unordered List Customization: </ins></h2>
-        <p> Different types of bullet points can be chosen with CSS in the list tag &lt;ul&gt;.<pre></pre>
-        <h3> Disc Points: </h3> 
-        <pre>
+    &lt;/ul&gt;</pre>
+    <ul>
+        <li> Item 1 </li>
+        <li> Item 2 </li>
+        <li> Item 3 </li>
+    </ul>
+    <table>
+        <caption>
+            <h2><ins> Unordered List Customization </ins></h2>
+        </caption>
+        <tr>
+            <td>
+                <h3> Disc Points: </h3>
+                <pre>
     &lt;ul style ="list-style-type:disc;"&gt;
         &lt;li&gt; Item 1 &lt;/li&gt;
-        &lt;li&gt; Item 2 &lt;/li&gt;
-        &lt;li&gt; Item 3 &lt;/li&gt;
-    &lt;/ul&gt;
-    <ul style="list-style-type:disc;">
-        <li> Item 1 </li> 
-        <li> Item 2 </li>
-        <li> Item 3 </li>
-    </ul>
-    </pre>
-    <h3> Circle Points: </h3>
-    <pre>
+    &lt;/ul&gt;</pre>
+                <ul style="list-style-type:disc;">
+                    <li> Item 1 </li>
+                </ul>
+            </td>
+            <td>
+                <h3> Circle Points: </h3>
+                <pre>
     &lt;ul style ="list-style-type:circle;"&gt;
         &lt;li&gt; Item 1 &lt;/li&gt;
+    &lt;/ul&gt;</pre>
+                <ul style="list-style-type:circle;">
+                    <li> Item 1 </li>
+                </ul>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <h3> Square Points</h3>
+                <pre>
+    &lt;ul style ="list-style-type:square;"&gt;
+        &lt;li&gt; Item 1 &lt;/li&gt;
+    &lt;/ul&gt;</pre>
+                <ul style="list-style-type:square;">
+                    <li> Item 1 </li>
+                </ul>
+            </td>
+            <td>
+                <h3> No Point </h3>
+                <pre>
+    &lt;ul style ="list-style-type:none;"&gt;
+        &lt;li&gt; Item 1 &lt;/li&gt;
         &lt;li&gt; Item 2 &lt;/li&gt;
-        &lt;li&gt; Item 3 &lt;/li&gt;
-    &lt;/ul&gt;
-    <ul style="list-style-type:circle;">
-        <li> Item 1 </li> 
-        <li> Item 2 </li>
-        <li> Item 3 </li>
-    </ul>
+    &lt;/ul&gt;</pre>
+                <ul style="list-style-type:none;">
+                    <li> Item 1 </li>
+                    <li> Item 2 </li>
+                </ul>
+            </td>
+        </tr>
+    </table>
+    <hr>
+
+    <h2 id="descriptionLists"><ins>Description Lists:</ins></a></h2>
+    <pre>
+    &lt;dl&gt;
+    &lt;dt&gt; Item 1 &lt;/dt&gt;
+    &lt;dd&gt; Description of Item 1 &lt;/dd&gt;
+    &lt;dt&gt; Item 2 &lt;/dt&gt;
+    &lt;dd&gt; Description of Item 2 &lt;/dd&gt;
+    &lt;/dl&gt;</pre>
+    <dl>
+        <dt>Item 1</dt>
+        <dd>Description of Item 1</dd>
+        <dt> Item 2</dt>
+        <dd>Description of Item 2</dd>
+    </dl>
+    </pre>
+    </p>
+    <hr>
+
+    <h2 id="nestedLists"> Nested Lists </h2>
+    <p> A nested list is a list within a list. List-ception.<sub>That joke will never be old.</sub><br>
+        To make a nested list, in between the list item opening tag &lt;li&gt; and closing tag &lt;/li&gt;, put a list.
+    </p>
+    <pre>
+        &lt;ul&gt;
+            &lt;li&gt; Item 1 &lt;/li&gt;
+            &lt;li&gt; Item 2
+                &lt;ol type="i" &gt;
+                    &lt;Item 2 sub 1 &gt;
+                    &lt; Item 2 sub 2 &gt;
+                    &lt; Item 2 sub 3 &gt;
+                &lt;/ol&gt;
+            &lt;/li&gt;
+            &lt;li&gt; Item 3 &lt;/li&gt;
+        &lt;/ul&gt;
+        
+        <ul>
+            <li> Item 1 </li>
+            <li> Item 2
+                <ol type ="i">
+                    <li>Item 2 sub 1</li>
+                    <li>Item 2 sub 2</li>
+                    <li>Item 2 sub 3</li>
+                </ol>
+            </li>
+            <li> Item 3 </li>
+        </ul>
         </pre>
-        </p>
-    </body>
+    <hr>
+
+    <h2 id="horizontalLists"><ins>Horizontal Lists</ins></h2>
+    <h3> Define a horizontal list in the header</h3>
+    <pre>
+                &lt;head&gt;
+                &lt;style&gt;
+                    ul.horizontalList {
+                        list-style-type: none;
+                        margin: 0;
+                        padding: 0;
+                        overflow: hidden;
+                        background-color: #333333;
+                    }
+                    li.horizontalList {
+                        float: left;
+                    }
+            
+                    li.horizontalList a {
+                        display: block;
+                        color: white;
+                        text-align: center;
+                        padding: 16px;
+                        text-decoration: none;
+                    }
+            
+                    li.horizontalList a:hover {
+                        background-color: #111111;
+                    }
+                &lt;/style&gt;
+            &lt;/head&gt;
+        </pre>
+    <h3> Implement Horizontal List </h3>
+    <p>To make a horizontal list work well, list item &lt;li&gt; must float left, and there must be an element<br>
+         with centered text in the list item, otherwise the items are scrunched to gether like items 1-4 below. In this case,<br>
+        we used a link with centered text to make the horizontal list look good.</p>
+    <pre>
+    &lt;ul class = "horizontalList"&gt;
+        &lt;li class = "horizontalList"&gt; Item 1&lt;/li&gt;
+        &lt;li class = "horizontalList"&gt; Item 2 &lt;/li&gt;
+        &lt;li class = "horizontalList"&gt; Item 3 &lt;/li&gt; 
+        &lt;li class = "horizontalList"&gt; Item 4 &lt;/li&gt; 
+    &lt;/ul&gt;
+        </pre>
+    <ul class="horizontalList">
+        <li class="horizontalList"> Item 1</li>
+        <li class="horizontalList"> Item 2 </li>
+        <li class="horizontalList"> Item 3 </li>
+        <li class="horizontalList"> Item 4 </li>
+        <li class="horizontalList"><a href="https://github.com/BPod123">Item 5 is a link to my github</a></li>
+        <li class="horizontalList"><a href="https://github.com/BPod123">So is item 6</a></li>
+        
+    </ul>
+    <hr>
+</body>
+
 </html>

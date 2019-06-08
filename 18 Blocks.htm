@@ -1,50 +1,47 @@
 <!-- Ben Podrazhansky -->
 <!DOCTYPE html>
 <html lang="en-US">
-    <head>
-        <link rel="stylesheet" href=".css/darkTheme.css">
-    </head>
-    <body>
-        <h1> 18 Blocks </h1>
-        <h4 style="font-family:monospace; text-align:center;">
-                <pre><ins>Previous:</ins> <a href="17 Lists.htm"><ins>17 Lists</ins></a>      <ins>Next:</ins> <a href = "19 Classes.htm"><ins>19 Classes</ins></a></pre>
-                </pre>
-            </h4>
-            <hr>
-        <h2> Blocks/Divisions &lt;div&gt;</h2>
-        <p> A block/division &lt;div&gt; is a section of the page. Similar to how the &lt;body&gt; is one large block,
-             a division can is like a &lt;body&gt; within a &lt;body&gt;.<br>
-            Here we will have a block with a yellow background inside of a block with a white background.</p>
-        <pre>
-            &lt;div style="background-color:white; color:black;"&gt;
-                &lt;h3 This is a block with a white background.&lt;/h3&gt;
+
+<head>
+    <link rel="stylesheet" href=".css/darkTheme.css">
+</head>
+
+<body>
+    <h2> Blocks &lt;div&gt;</h2>
+    <p> The &lt;div&gt; makes a block. a block is similar to the body section of html. Anything can go inside of it.
+        It is its own section of the page. You can have blocks within blocks.</p>
+    <pre>
+            &lt;div style="background-color:white; color:black;"&gl;
+            &lt;p&gl; This is one block&lt;/p&gl;
+                &lt;div style="background-color:yellow;"&gl;
                 &lt;hr&gt;
-                &lt;p&gt; I acts like a &lt;body&gt; would. &lt;/p&gt;
+                &lt;p&gl; This is another block within a block. Notice how blocks can have their own background-colors.&lt;/p&gl;
+                &lt;hr&gt;
+                &lt;/div&gl;
+                &lt;p&gt; Now we are back in the first block &lt;/p&gt;
+            &lt;/div&gl;
+    </pre>
+    <div style="background-color:white; color:black;">
+        <p> This is one block</p>
+        <div style="background-color:yellow;">
+            <hr>
+            <p> This is another block within a block. Notice how blocks can have their own background-colors.</p>
+            <hr>
+        </div>
+        <p> Now we are back in the first block </p>;
+    </div>
+    <hr>
+    <h2> The &lt;span&gt; element</h2>
+    <p> The &lt;span&gt; is used to group text. <span style="color:red;">Suppose </span><span style="color:green;">you</span>
+        <span style="color:blue;">wanted</span> <span style="color:brown;">to</span> <span style="color:blueviolet">have</span>
+        <span style="color:aqua;">every</span> <span style="color:rebeccapurple;">word</span>
+        <span style="color:tomato;">in</span> <span style="color:burlywood;">a</span> <span style="color:chocolate;">sentence</span>
+        <span style="color:chartreuse;">be</span> <span style="color:darkgoldenrod;">a</span>
+        <span style="color:yellow;">different</span> <span style="color:violet;">color</span>
+        <span style="color:turquoise;">while</span> <span style="color:crimson;">remaining</span> 
+        <span style="color:chartreuse;">in</span> <span style="color:darkgreen;">the</span>
+        <span style="color:steelblue;">same</span> <span style="color:cadetblue">paragraph.</span> Then you would use spans.</p>
+        <img src="images/span example.jpg" alt="The html code for the previous sentence with every word in a different color." width = 1000 height = 200 >
+</body>
 
-                &lt;div style="background-color:yellow;"&gt;
-                    &lt;h3 This is a block with a yellow background.&lt;/h3&gt;
-                    &lt;hr&gt;
-                    &lt;p&gt; It acts like a &lt;body&gt; would. &lt;/p&gt;
-                &lt;/div&gt;
-                &lt;h3&gt; This is in the white-background block again &lt;/h3&gt;
-            &lt;/div&gt;
-        </pre>
-        <div style="background-color:white; color:black;">
-                <h3></h3> This is a block with a white background.</h3>
-                <hr>
-                <p> It acts like a &lt;body&gt; would. </p>
-                
-                <div style="background-color:yellow;">
-                    <h3></h3> This is a block with a yellow background.</h3>
-                    <hr>
-                    <p> I acts like a &lt;body&gt; would. </p>
-                </div>
-                <h3> This is in the white-background block again </h3>
-                </div>
-                    
-
-
-        </pre>
-
-    </body>
 </html>

@@ -10,3 +10,4 @@ table   {border: 1px solid white; width: 100%;}
 th, tr, td  {border: 1px solid white;}
 a:visited   {color:rgb(250, 10, 210)}
 a:hover     {color:yellow;}
+a:link       {color:#f7f122;}

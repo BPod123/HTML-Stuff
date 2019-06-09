@@ -1,0 +1,87 @@
+<!-- Ben Podrazhansky -->
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <link rel="stylesheet" href=".css/darkTheme.css">
+    <style>
+            #cssEdit    {background-color:red;
+                    color:white;
+                    text-decoration: underline;}
+        </style>
+</head>
+
+<body>
+    <h1> 21 Iframes </h1>
+    <h4 style="font-family:monospace; text-align:center;">
+        <pre><ins>Previous:</ins> <a href="19 Classes.htm"><ins>19 Classes</ins></a>      <ins>Next:</ins> <a href = "21 Iframes.htm"><ins>21 Iframes</ins></a></pre>
+        </pre>
+    </h4>
+    <hr>
+    <h2> The 'id' Attribute </h2>
+    <p title = "The id Attribute"> The id attribute is used as a sort of label to use with CSS and JavaScript.
+         You can assign an id to one or multiple elements and any CSS or JavaScript that manipulates elements
+          based on their id can affect elements with that id.<br>
+          <strong><mark>Note that using the same id for multiple elements will work
+               with <abbr title="Cascading Style Sheets">CSS</abbr>, but not JavaScript</mark></strong></p>
+    <hr>
+    <h2> Using id with <abbr title="Cascading Style Sheets">CSS</abbr> </h2>
+    <p>The following code uses CSS to manipulate any elements with the id "cssEdit" by defining the style for elements
+        with that id in the header.</p>
+    <pre>
+        &lt;head&gt;
+            &lt;style&gt;
+                #cssEdit    {background-color:red;
+                        color:white;
+                        text-decoration: underline;}
+            &lt;/style&gt;
+        &lt;/head&gt;
+        &lt;body&gt;
+            &lt;h3 id = "cssEdit"&gt; This header has the id "cssEdit" &lt;/h3&gt;
+            &lt;p id="cssEdit"&gt; This paragraph also has the id "cssEdit", however this is not good practice. &lt;/p&gt;
+                defined in the &lt;head&gt;
+            &lt;/p&gt;
+        &lt;/body&gt;
+    </pre>
+    <h3 id = "cssEdit"> This header has the id "cssEdit"</h3>
+    <p id="cssEdit"> This paragraph also has the id "cssEdit", however this is not good practice.
+    </p>
+    <hr>
+    <h2> Using id with JavaScript</h2>
+    <pre>Consider the following code and its following implementation:
+            &lt;p id="target"&gt; This paragraph will be changed when a button is pressed. &lt;/p&gt;
+            
+            &lt;!-- Button to change text --&gt;
+            &lt;button type="button"
+            onClick='document.getElementById("target").innerHTML = "This paragraph has been edited with JavaScirpt."'&gt;
+            Change Text &lt;/button&gt;
+            
+            &lt;!-- Button to revert text back --&gt;
+            &lt;button type="button"
+            onClick='document.getElementById("target").innerHTML = "This paragraph will be changed when a button is pressed."'&gt;
+            Change text back&lt;/button&gt;
+        </pre>
+    <h4 id="target"> This header will be changed when a button is pressed.</h4>
+    <p id="target"> This paragraph will be changed when a button is pressed. </p>
+    <!-- Button to change text -->
+    <button type="button"
+        onClick='document.getElementById("target").innerHTML = "This text has been edited with JavaScirpt."'>
+        Change Text
+    </button>
+    <!-- Button to revert text back -->
+    <button type="button"
+        onClick='document.getElementById("target").innerHTML = "This header will be changed when a button is pressed."'>
+        Change text back
+    </button>
+    <p>Here we can see a problem with using multiple id&#39;s. JavaScript will only find the first element with the specified id.
+        <br>The paragraph will not be changed even though it has the same id as the header.</p>
+    <br>
+    <h3><a href="https://github.com/BPod123/JavaScript-Tutorial"> Check out my JavaScript Tutroial on github.</a></h3>
+    <hr>
+    <h2> When to use class or id </h2>
+    <p> It is good practive to use class when applying it to multiple elements and id with individual elements. </p>
+    <hr>
+
+</body>
+
+</html>

@@ -1,0 +1,48 @@
+<!-- Ben Podrazhansky -->
+<!DOCTYPE html>
+
+<head>
+    <link rel="stylesheet" href=".css/darkTheme.css">
+</head>
+
+<body>
+    <h1> 21 iframes </h1>
+    <h4 style="font-family:monospace; text-align:center;">
+        <pre><ins>Previous:</ins> <a href="20 Id.htm"><ins>20 Id's</ins></a>      <ins>Next:</ins> <a href = "22 JavaScript.htm"><ins>22 JavaScript</ins></a></pre>
+        </pre>
+    </h4>
+    <hr>
+    <h2> Iframes &lt;iframe&gt; </h2>
+    <p> An &lt;iframe&gt; is a window within a window (window-ception). It is defined as follows:<br>
+    &lt;iframe src=<q><i>URL</i></q>&gt; &lt;/iframe&gt;<br>
+    You can also apply width, and height attributes to an iframe as you would an image &lt;img&gt;</p>
+            
+    </iframe>
+    <hr>
+    <h2> &lt;iframe src=<q><i>url</i></q> width=<q>500</q> height=<q>500</q>&gt;&lt;/iframe&gt;</h2>
+    
+    <pre>
+            &lt;iframe src=<q>20 Id.htm</q> width=<q>500</q> height=<q>500</q>&gt;&lt;/iframe&gt;
+    </pre>
+    <iframe src="20 Id.htm" width="500" height="500"></iframe>
+    <hr>
+    <h2> <abbr title="Cascading Style Sheets">CSS</abbr> with Iframes</h2>
+    <pre>
+            &lt;iframe src=<q>13 CSS.htm</q> style="color:black; background-color:white; width:500px; height:500px;"&gt;&lt;/iframe&gt;
+    </pre>
+    <p> Note that if the iframe is inside of an element that has had its style set with CSS, the style may carry over
+        into the iframe unless it is undone in the style of the iframe.
+    </p>
+    <iframe src="13 CSS.htm" style="color:black; background-color:white; width:500px; height:500px;"></iframe>
+    <hr>
+    <h2> Make links be displayed in iframes </h2>
+    <p> You can set the target of a link to be an iframe. All you have to do is give the iframe a name with the name
+        attribute.
+    </p>
+    <pre>
+            &lt;iframe src=<q>https://github.com/BPod123/HTML-Tutorial</q> width=<q>500</q> height=<q>500</q> name = "linkTarget"&gt;&lt;/iframe&gt;
+            &lt;a href="14 Links.htm" target="linkTarget"&gt; Tutorial on Links &lt;/a&gt;
+        </pre>
+    <iframe src="https://github.com/BPod123/HTML-Tutorial" width ="500" height = "500" name = "linkTarget"></iframe>
+    <a href="14 Links.htm" target="linkTarget">Tutorial on Links</a>
+</body>

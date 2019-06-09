@@ -1,0 +1,42 @@
+<!-- Ben Podrazhansky-->
+<!DOCTYPE html>
+<html lang="en-US">
+    <head>
+        <link rel="stylesheet" href=".css/darkTheme.css">
+    </head>
+    <body>
+            <h1> 23 File Paths </h1>
+    <h4 style="font-family:monospace; text-align:center;">
+        <pre><ins>Previous:</ins> <a href="22 JavaScript.htm"><ins>22 JavaScript</ins></a>      <ins>Next:</ins> <a href = "24 Head.htm"><ins>24 &lt;head&gt;</ins></a></pre>
+        </pre>
+    </h4>
+    <hr>
+    <h2> Defining what a file is </h2>
+    <p> A file path is exactly what it sounds like; a path to a file. As you probably know, computers have a file system
+        that organizes files. Every file has a unique location that it does not share with any other file.<br>
+        <dl style="list-style-type:circle">
+            <caption> When we say the word file in everyday use, we are refering to one of two types of files:</caption>
+            <dt> <strong>Directories</strong></dt>
+                <dd> Files that hold other files </dd>
+            <dt> <strong>Files</strong> </dt>
+                <dd> Files with content, such as a text or word document.</dd>
+        </dl>
+    </p>
+    <hr>
+    <h2>Absolute and relative file paths</h2>
+    <p> An absolute file path is location of the file on the computer for example:<br>"C:\Users\ben\Documents\example.txt"<br>
+    A relative file path is the location of one file relative to the location of another. 
+    A relative file path will not often not be a top down path as shown above. Sometimes you have to 
+    go up then over. To go up in the file system, put two periods ".." in the path. This will be shown in 
+    the following example:</p>
+     Consider the following file structure:
+        <img src="images/relative file path example.JPG" width="500" height="500" style="float:left">
+        
+        <p>Two files are in a system with multiple directories. The absolute paths of the files are, from top down: 'C/Users/ben/Documents/HTML-Tutorial/23 File Paths.htm' and 'C/Users/ben/Documents/JavaScript-Tutorial/1 Change HTML Elements.htm'
+    <pre>
+        To get from the file "23 File Paths.htm" to "1 Change HTML Elements.htm", the relative path would be:
+        "../JavaScript-Tutorial/1 Change HTML Elements.htm"
+        .. means go up in the file system, so in this case it means exit the 'HTML-Tutorial' Directory.
+    </pre></p>
+    </body>
+</html>

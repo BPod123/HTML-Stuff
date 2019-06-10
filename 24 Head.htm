@@ -4,6 +4,8 @@
 
 <head>
     <link rel="stylesheet" href=".css/darkTheme.css">
+    <title>24 &lt;head&gt;</title>
+    <meta name="author" content="Ben Podrazhansky">
 </head>
 
 <body>
@@ -13,15 +15,65 @@
         </pre>
     </h4>
     <hr>
+
     <h2> What is the &lt;head&gt;</h2>
     <p> In short, &lt;head&gt; stores metadata. Metadata is data about other data. The &lt;head&gt; can be used to define 
         <abbr title="Cascading Style Sheets">CSS</abbr> stylings for multiple elements at once, 
         link to css file that define stylings, set the title of the tab, and more.
     </p>
     <hr>
-    <h2> The &lt;title&gt; element </h2>
-    <p> The &lt;title&gt; is the title of the page. By default, when no &lt;title&gt; is present in the head,
-        the title will be the name of the file. With the &lt;title&gt; you can set the text that is displayed in the tab.
+
+    <h2> The &lt;title&gt; tag</h2>
+    <p> The &lt;title&gt; is the title of the page. You can use it to set the text that is displayed in the tab.
+        By default, when no &lt;title&gt; is present in the head, the title will be the name of the file. 
     </p> 
+    <hr>
+
+    <h2> The &lt;style&gt; </h2>
+    <p>The &lt;style&gt; tag is used to define <abbr title="Cascading Style Sheets">CSS</abbr> for the page.
+    Within the &lt;style&gt; tag, code is writtin in <abbr title="Cascading Style Sheets">CSS</abbr>, not HTML. When you
+    see the &lt;style&gt; tag, think <abbr title="Cascading Style Sheets">CSS</abbr> file, because you are essentially
+    making one for the document.</p>
+    <hr>
+
+    <h2> The &lt;script&gt; tag </h2>
+    <p> The &lt;script&gt; tag is like the &lt;style&gt; tag except instead of <abbr title="Cascading Style Sheets">CSS</abbr>,
+    the code within is in JavaScript. </p>
+    <hr>
+
+    <h2> The &lt;link&gt; tag </h2>
+    <p> The &lt;link&gt; tag is used to link other files to this one. You can link a <abbr title="Cascading Style Sheets">CSS</abbr>
+    file to with the following format:<br><br>
+    &lt;link rel="stylesheet" href="url/or/path/to/file.css"&gt;<br><br>
+    You can use <abbr title="Cascading Style Sheets">CSS</abbr> to set the style for multiple pages. It is more efficient
+    than using the same &lt;style&gt; tag for every page.</p>
+    <hr>
+
+    <h2> The &ltmeta&gt; tag </h2>
+    <p> The &lt;meta&gt; tag is used to store information about the page that is not necessarily seen on the page. 
+        You can use it to store the author of page's name, a description of the page, keywords associated with the page,
+        the refresh rate, and more.
+        The format is as follows:<br><br>
+        &lt;meta name="name of item" content="information about item"&gt;<br><br>
+
+        Examples:
+        <dl>
+            <dt>&lt;meta name = "author" content="Ben Podrazhansky"&gt;</dt>
+                <dd>The author of the page is set to Ben Podrazhansky now.</dd>
+            <dt>&lt;meta name="description" content="Awesome HTML Tutorial"&gt;</dt>
+                <dd>Now there is a descritption for the page.</dd>
+            <dt>&lt;meta name="keywords" content="HTML, CSS, JavaScript"&gt;</dt>
+                <dd> The content of the page is now associated with "HTML" in searches.</dd>
+            <dt>&lt;meta http-equiv="refresh" content="30"&gt;</dt>
+                <dd> This one is a little different. It sets the refresh rate of the page to once every 30 seconds.</dd>
+            <dt>&lt;meta charset="UTF-8"</dt>
+                <dd> Set the character set of the page. </dd>
+        </dl>
+    </p>
+    <hr>
+
+    
+
+
 </body>
 </html>

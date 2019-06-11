@@ -1,0 +1,151 @@
+<!-- Ben Podrazhansky -->
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <link rel="stylesheet" href=".css/darkTheme.css">
+    <meta name="author" content="Ben Podrazhansky">
+    <meta charset="UTF-8">
+    <title> 25 Layouts </title>
+</head>
+
+<body>
+    <header>
+        <h1> 25 Layouts </h1>
+        <h4 style="font-family:monospace; text-align:center;">
+            <pre><ins>Previous:</ins> <a href="24 Head.htm"><ins>24 &lt;head&gt;</ins></a>      <ins>Next:</ins> <a href = "26 Responsive.htm"><ins>26 Responsive </ins></a></pre>
+            </pre>
+        </h4>
+        <hr>
+    </header>
+    <section>
+        <!-- Section for types of layouts-->
+        <h2>What is a layout?</h2>
+        <p> A layout is functionally the same as a block &lt;div&gt;. The argument for using layouts over blocks
+            is to make code more readable. For example, if you want a section of your page to be beside
+            another
+            section, using an &lt;aside&gt; block is better than a &lt;div&gt; because when you see it, you know exactly
+            the intention of it.<br>
+            That is essentially the only reason to use a layout over a traditional block &lt;div&gt;.
+        </p>
+    </section>
+    <h2> Types of Layouts </h2>
+    <article style="float:left;">
+        <dl style="list-style-type:disc;">
+            <dt> &#9974; <a href=#header> &lt;header&gt;</a></dt>
+            <dd> &#10095; A header pane for a section.</dd>
+            <dt> &#9974; <a href=#nav>&lt;nav&gt;</a></dt>
+            <dd> &#10095; Navigation bar is good for putting links to other pages side by side. </dd>
+            <dt> &#9974; <a href=#section>&lt;section&gt;</a></dt>
+            <dd> &#10095; Similar to a block &lt;div&gt;</dd>
+            <dt> &#9974; <a href=#article>&lt;article&gt;</a></dt>
+            <dd> &#10095; Similar to a &lt;section&gt;, but generally reserved for text only.</dd>
+            <dt> &#9974; <a href=#details> &lt;details&gt;</a></dt>
+            <dt> &#9974; <a href=#summary> &lt;summary&gt;</a></dt>
+            <dd> &#10095; A nice place to summarize the content of the page. </dd>
+        </dl>
+    </article>
+    <aside style="float:center;">
+        <img src="images/layouts.png" width="319" height="413">
+    </aside>
+    <hr>
+    <p> As previously stated, all layouts are just different names for a block &lt;div&gt;. All layouts have the
+        same format:
+        <pre>
+            &lt;layout tag&gt;
+                content
+            &lt;/layout tag&gt;
+            </pre>
+        Here are some example layouts:
+    </p>
+    <section id="header">
+        <h2> Header example</h2>
+        <pre>
+        &lt;header style="background-color:green; color:white;"&gt;
+            &lt;h3 style="text-align:center;"&gt;This is an example of a header. Put a title here.&lt;/h3&gt;
+        &lt;/header&gt;
+        </pre>
+        <header style="background-color:green; color:white;">
+            <h3 style="text-align:center;">This is an example of a header. Put a title here.</h3>
+        </header>
+    </section>
+    <hr>
+    <section id="nav">
+        <h2> Nav bar example </h2>
+        <pre>
+                &lt;head&gt;
+                &lt;style&gt;
+                    /* Horizontal List Stuff*/
+                    ul.horizontalList {
+                        list-style-type: none;
+                        margin: 0;
+                        padding: 10;
+                        overflow: hidden;
+                    }
+            
+                    ul.horizontalList li {
+                        float: left;
+                        display: block;
+                        text-align: center;
+                        padding: 16px;
+                        border: 1px solid grey;
+                    }
+                &lt;/style&gt;
+            &lt;/head&gt;
+            &lt;body&gt;
+            &lt;nav style="background-color:blue; color:red;"&gt;
+                &lt;h3&gt;This is a nav bar. It is a good place for horizontal lists.&lt;/h3&gt;
+                &lt;ul class="horizontalList"&gt;
+                    &lt;li&gt; Item 1 &lt;/li&gt;
+                    &lt;li&gt; Item 2 &lt;/li&gt;
+                    &lt;li&gt; &lt;a href=#nav&gt; This is a nice place for links.&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt; Item 3 &lt;/li&gt;
+                    &lt;li&gt; Item 4 &lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/nav&gt;
+            &lt;/body&gt;
+        </pre>
+        <nav style="background-color:blue; color:red;">
+            <h3>This is a nav bar. It is a good place for horizontal lists.</h3>
+            <ul class="horizontalList">
+                <li> Item 1 </li>
+                <li> Item 2 </li>
+                <li> <a href=#nav> This is a nice place for links.</a></li>
+                <li> Item 3 </li>
+                <li> Item 4 </li>
+            </ul>
+        </nav>
+    </section>
+    <section id="section">
+        <pre>
+        &lt;section id="section" style="background-color:blueviolet; color:white;"&gt;
+            &lt;h3&gt;This is a section.&lt;/h3&gt;
+            &lt;p&gt; Put whatever you want in here. &lt;/p&gt;
+        &lt;/section&gt;
+        </pre>
+        <section style="background-color:blueviolet; color:white;">
+            <h3>This is a section.</h3>
+            <p> Put whatever you want in here. </p>
+        </section>
+    </section>
+    <section id="article">
+        <pre>
+            &lt;article id="article" style="background-color:red; color:white;"&gt;
+                &lt;h3&gt; This is an &lt;article&gt;&lt;/h3&gt;
+                &lt;p&gt; Put text in here. &lt;/p&gt;
+            &lt;/article&gt;
+        </pre>
+        <article id="article" style="background-color:red; color:white;">
+
+            <h3> This is an &lt;article&gt;</h3>
+            <p> Put text in here. </p>
+        </article>
+    </section>
+    <hr>
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,176 @@
+<!-- Ben Podrazhansky -->
+<!DOCTYPE html>
+<hmtl lang="en-US">
+
+    <head>
+        <link rel="stylesheet" href=".css/darkTheme.css">
+        <meta name="author" content="Ben Podrazhansky">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <style>
+            table,
+            th,
+            td {
+                border-collapse: collapse;
+            }
+            .thirty    {float:left;
+                width:30%; /* Default width value */
+            }
+            .forty  {float:left;
+            width:40%; /* Default width value */ }
+            /* The sections will only be in a row is the as wide or wider than 600 pixels 
+            The thirty, forty, and other thirty will have their widths add up to 100% of the screen*/
+            @media screen and (max-width: 600px) {
+                .thirty, .forty, .thirty {
+                    width:100%
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <header>
+            <h1> 26 Automatic Resizing </h1>
+            <h4 style="font-family:monospace; text-align:center;">
+                <pre><ins>Previous:</ins> <a href="25 Layouts.htm"><ins>25 Layouts</ins></a>      <ins>Next:</ins> <a href = "27 Computer Code.htm"><ins>27 Computer Code </ins></a></pre>
+                </pre>
+            </h4>
+            <hr>
+        </header>
+        <section id="imageResizing">
+            <h2> Automatic Image Sizing With the auto keyword </h2>
+            <p> When setting the width and height of an object, you can set one parameter to be based on the other with
+                auto. The width and height of an object are both set to auto by default.<br>
+                For Example:
+                <pre>
+                        &lt;img src="images/mountain.jpeg" width=50%; height=auto&gt;
+                        or use <abbr title="Cascading Style Sheets"><a href="13 CSS.htm">CSS</a></abbr>>
+                        &lt;img src="images/mountain.jpeg" style="width:50%; height:auto"&gt;
+                Try resizing the window. The pictues width and height should change.</pre>
+            </p>
+
+            <img src="images/mountain.jpeg" style="width:50%; height:auto">
+            <hr>
+        </section>
+        <section>
+            <h2> max-width</h2>
+            <p> The max-width property is used to set the maximum width that an
+                image/element can be. Note that it doesn't set the width, it only limits the maximum it can be.
+            </p>
+            <img src="images/mountain.jpeg" style="max-width:20%;">
+            <hr>
+        </section>
+        <section>
+            <h2> The &lt;picture&gt; tag </h2>
+            <p> When you want to have different images for different sized windows, use a &lt;picture&gt; tag.<br>
+                Resize the window to change the image.
+                <pre>
+                    &lt;picture&gt;
+                        &lt;source srcset="images/smallMountain.jpeg" width=250px media="(max-width: 600px)"&gt;
+                        &lt;source srcset="images/mountain.jpeg" width=300px media="(max-width:800px)"&gt;
+                        &lt;source srcset="images/bigMountain.jpeg"&gt;
+                        &lt;img src="images/bigMountain.jpeg"&gt;
+                    &lt;/picture&gt;
+                </pre>
+                <picture>
+                    <source srcset="images/smallMountain.jpeg" width=250px media="(max-width: 600px)">
+                    <source srcset="images/mountain.jpeg" width=300px media="(max-width:800px)">
+                    <source srcset="images/bigMountain.jpeg">
+                    <img src="images/bigMountain.jpeg">
+                </picture>
+            </p>
+        </section>
+        <section id="viewWidth">
+            <h2> Change font size with view width </h2>
+            <p> You can set the font size of text with view width in
+                <aabr title="Cascading Style Sheets"><a href="13 CSS.htm">CSS</a></aabr> as follows:<br>
+                style="font-size:Xvw"<br>
+                where x is a number.</p>
+            <h3>&lt;h3&gt; Header 3 &lt;/h3&gt;</h3>
+            <h3 style="font-size:4.8;"> &lt;h3 style="font-size:4.8;"&gt; Header 3 &lt;/h3&gt;</h3>
+            <h3 style="font-size:1vw;"> &lt;h3 style="font-size:1vw;"&gt; Header 3 &lt;/h3&gt;</h3>
+            <h3 style="font-size:7vw;">&lt;h3 style="font-size:7vw;"&gt; Header 3 &lt;/h3&gt;</h3>
+            <p> Note that their are actually 3 ways to set font-size of text:
+                <table>
+                    <tr>
+                        <th> </th>
+                        <th> % </th>
+                        <th> px </th>
+                        <th> vw</th>
+                    </tr>
+                    <tr>
+                        <th> Description: </th>
+                        <td> Sets font size based on percentage of default text size </td>
+                        <td> Sets font size to a specifix height in pixels</td>
+                        <td> Sets font size based on size of window and will change with the size of the window</td>
+                    </tr>
+                    <tr>
+                        <th> Example:<br>
+                            Default: <br>
+                            &lt;p&gt; Normal size paragraph &lt;/p&gt; <br>
+                            <p> Normal size paragraph</p>
+                        </th>
+                        <td> &lt;p style="font-size:50%;"&gt; 50% size of normal paragraph &lt;/p&gt;<br>
+                            <p style="font-size:50%;"> 50% size of normal paragraph </p>
+                        </td>
+                        <td> &lt;p style="font-size:30px;"&gt; 30 pixel tall text &lt;/p&gt; <br>
+                            <p style="font-size:30px;"> 30 pixel tall text </p>
+                        </td>
+                        <td> &lt;p style="font-size:6.8vw;"&gt; 6.8 view width &lt;/p&gt; <br>
+                            <p style="font-size:6.8vw;"> 6.8 view width. Try resizing window.</p>
+                        </td>
+                    </tr>
+                </table>
+            </p>
+        </section>
+        <section id="mediaQueries">
+            <p>You can use media queries to put elements next to each other when the screen is a specific size.
+                Make the elements that you want side by side to take up different widths that are percentages of the
+                screen width and have them float left.
+            </p>
+            <pre>
+    &lt;head&gt;
+        &lt;style&gt;
+            .thirty {
+                float: left;
+                    width: 30%; /* Default width value */
+                    }
+            .forty {
+                float: left;
+                    width: 40%;
+                    /* Default width value */
+                    }
+                    /* The sections will only be in a row is the as wide or wider than 600 pixels 
+                        The thirty, forty, and other thirty will have their widths add up to 100% of the screen*/
+                    @media screen and (max-width: 600px) {
+                        .thirty,
+                        .forty,
+                        .thirty {                                
+                            width: 100%
+                            }
+                        }
+        &lt;/style&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;div class = "thirty" style="background-color:lightblue; color:black;"&gt;
+            &lt;h3&gt; Section 1 &lt;/h3&gt;
+        &lt;/div&gt;
+        &lt;div class = "forty" style="background-color:brown;"&gt;
+            &lt;h3&gt; Section 2 &lt;/h3&gt;
+        &lt;/div&gt;
+        &lt;div class = "thirty" style="background-color:green;"&gt;
+            &lt;h3&gt; Section 3 &lt;/h3&gt;
+        &lt;/div&gt;
+    &lt;/body&gt;
+                </pre>
+            <div class = "thirty" style="background-color:lightblue; color:black;">
+                <h3> Section 1 </h3>
+            </div>
+            <div class = "forty" style="background-color:brown;">
+                <h3> Section 2 </h3>
+            </div>
+            <div class = "thirty" style="background-color:green;">
+                <h3> Section 3 </h3>
+            </div>
+        </section>
+    </body>
+</hmtl>
